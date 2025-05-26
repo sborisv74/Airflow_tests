@@ -33,4 +33,10 @@ t2 = PythonOperator(
   dag=dag
 )
 
+t3 = BashOperator(
+  task_id='print_sum',
+  bash_command='python ~/sborisv74/',
+  dag=dag
+)
+
 t1 >> t2
