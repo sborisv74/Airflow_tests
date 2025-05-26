@@ -34,9 +34,9 @@ t2 = PythonOperator(
 )
 
 t3 = BashOperator(
-  task_id='print_sum',
-  bash_command='python ~/sborisv74/',
+  task_id='run_script',
+  bash_command='python https://github.com/sborisv74/study_projects/blob/main/01HW.ipynb',
   dag=dag
 )
 
-t1 >> t2
+t1 >> t2 >> t3
